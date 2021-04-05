@@ -6,7 +6,9 @@ for (let btn of buttons) {
     let cmd = btn.dataset["command"];
     if (cmd === "createLink") {
       let url = prompt("Enter the link here: ", "http://");
-      document.execCommand(cmd, false, url);
+      if (url) {
+        document.execCommand(cmd, false, url);
+      }
       output.focus();
     } else {
       document.execCommand(cmd, false, null);
