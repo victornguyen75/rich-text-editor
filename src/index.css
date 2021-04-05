@@ -2,8 +2,12 @@
 *:before,
 *:after {
   box-sizing: border-box;
-};
+}
 
+#title {
+  margin: 1rem;
+  font-family: "PT Sans", sans-serif;
+}
 
 .toolbar { /* no styles necessary since this will keep the items in a straight list */ }
 .tool-list {
