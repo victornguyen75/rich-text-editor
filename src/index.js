@@ -1,5 +1,5 @@
 const output = document.getElementById("output");
-const buttons = document.getElementsByClassName("tool--btn");
+const buttons = document.getElementsByTagName("button");
 
 for (let btn of buttons) {
   btn.addEventListener("click", () => {
@@ -9,10 +9,18 @@ for (let btn of buttons) {
       if (url) {
         document.execCommand(cmd, false, url);
       }
-      output.focus();
     } else {
       document.execCommand(cmd, false, null);
-      output.focus();
     }
+
+    output.focus();
   });
 }
+
+const loadFile = (event) => {
+  const img = document.createElement("img");
+  img.src = URL.createObjectURL(event.target.files[0]);
+
+  const src = document.getElementById("output");
+  src.appendChild(img);
+};

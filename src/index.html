@@ -133,10 +133,18 @@
             <i class="fas fa-link"></i>
           </button>
         </li>
+        <li class="tool">
+          <label
+            for="file-upload" 
+            class="tool--btn">
+            <i class="far fa-images"></i>
+          </label>
+        </li>
       </ul>
     </div>
 
     <div id="output" contenteditable="true" autofocus></div>
+    <input type="file" accept="image/*" name="image" id="file-upload" onchange="loadFile(event)">
     <script src="index.js"></script>
   </body>
 </html>
